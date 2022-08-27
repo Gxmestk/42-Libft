@@ -6,14 +6,13 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/25 21:18:02 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/08/25 21:19:32 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/08/26 13:49:12 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int
-	ft_isdigit(int c)
+int	ft_isdigit(int c)
 {
 	return (c >= '0' && c <= '9');
 }

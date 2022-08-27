@@ -1,0 +1,2 @@
+
+	://stackoverflow.com/a/17850807d	*((unsigned char *)dest--) = (unsigned char)val;

@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
+/*   By: tkhemniw <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/25 21:19:42 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/08/26 13:58:35 by tkhemniw         ###   ########.fr       */
+/*   Created: 2022/08/26 13:40:19 by tkhemniw          #+#    #+#             */
+/*   Updated: 2022/08/26 14:00:13 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isprint(int c)
+void	ft_bzero(void *dest, size_t len)
 {
-	return (c > 31 && c < 127);
+	ft_memset(dest, 0, len);
 }

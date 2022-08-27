@@ -2,8 +2,8 @@
 
 char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 {
-	const char *haystack;
-	const char *needle;;
+	const char	*haystack;
+	const char	*needle;;
 
 	if (!to_find)
 		return ((char *)str);

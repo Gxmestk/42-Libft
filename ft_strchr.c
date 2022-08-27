@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/27 15:56:55 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/08/27 16:41:44 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/08/27 17:04:42 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_strchr(const char *str, int c)
 {
 	if (!c)
-		return NULL;
+		return (NULL);
 	while (*str)
 	{
 		if (*str == c)

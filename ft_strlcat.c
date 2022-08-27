@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/27 15:33:47 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/08/27 15:41:41 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/08/27 16:47:36 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t dstw;
-	size_t srcw;
+	size_t	dstw;
+	size_t	srcw;
 
 	if (size <= ft_strlen(dst))
 		return (size + ft_strlen(src));

@@ -2,14 +2,14 @@
 
 char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 {
-	char *haystack;
-	char *needle;;
+	const char *haystack;
+	const char *needle;;
 
 	if (!to_find)
 		return ((char *)str);
     haystack = str;
 	needle = to_find;
-	while (true)
+	while (1)
 	{
          
 		if (*needle == '\0')

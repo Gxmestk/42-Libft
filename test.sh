@@ -1,5 +1,5 @@
 #! /bin/sh
-
+clear
 touch g.o
 
 rm *.o

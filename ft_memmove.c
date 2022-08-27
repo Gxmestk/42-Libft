@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/27 14:03:39 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/08/27 14:39:48 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/08/27 16:33:41 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-    unsigned char	*d;
-	unsigned char	*s;
+    unsigned char	*p_src;
+	unsigned char	*p_dst;
 
     if (!dst || !src)
 		return (NULL);

@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/25 23:37:44 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/08/27 14:39:11 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/08/27 16:34:20 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	*ft_memset(void *dst, int val, size_t len)
 
 	if (!dst)
 		return (NULL);
-	p_dst = (unsigned char)dst;
+	p_dst = (unsigned char *)dst;
 	while (len-- > 0)
 		*(p_dst++) = (unsigned char)val;
 	return (dst);

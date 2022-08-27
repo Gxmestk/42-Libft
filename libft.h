@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/25 15:25:15 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/08/27 14:22:37 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/08/27 15:43:55 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,16 +33,16 @@ int		ft_isprint(int c);
 
 /* String */
 size_t	ft_strlen(const char *str);
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);//
-size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);//
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 
 /* Mem */
 void	*ft_memset(void *dst, int val, size_t len);
 void	ft_bzero(void *dst, size_t len);
-void	*ft_memcpy(void *dst, const void *src, size_t LITTLE_ENDIAN);
+void	*ft_memcpy(void *dst, const void *src, size_t len);
 void	*ft_memmove(void *dst, const void *src, size_t len);
-void	*ft_memchr(const void *s, int c, size_t n);//
-int		ft_memcmp(const void *s1, const void *s2, size_t n);//
+void	*ft_memchr(const void *str, int c, size_t len);//
+int		ft_memcmp(const void *str1, const void *str2, size_t len);
 
 int		ft_toupper(int c);
 int		ft_tolower(int c);

@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/25 15:25:15 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/08/27 15:43:55 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/08/27 16:02:47 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,16 +46,15 @@ int		ft_memcmp(const void *str1, const void *str2, size_t len);
 
 int		ft_toupper(int c);
 int		ft_tolower(int c);
-char	*ft_strchr(const char *s, int c);
-char	*ft_strrchr(const char *s, int c);
-int		ft_strncmp(const char *s1, const char *s2, size_t n);
-char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
+char	*ft_strchr(const char *str, int c);
+int		ft_strncmp(const char *str1, const char *str2, size_t len);
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len);//
 
 int		ft_atoi(const char *str);
 
 /* use of  malloc() */
 void	*ft_calloc(size_t count, size_t size);
-char	*ft_strdup(const char *s1);
+char	*ft_strdup(const char *str1);
 
 /* additional */
 /*

@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/25 23:37:44 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/08/27 16:34:20 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/08/27 16:48:21 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,4 +23,3 @@ void	*ft_memset(void *dst, int val, size_t len)
 		*(p_dst++) = (unsigned char)val;
 	return (dst);
 }
-

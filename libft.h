@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/25 15:25:15 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/08/27 16:02:47 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/08/27 17:05:22 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ typedef struct s_list
 	struct s_list	*next;
 }	t_list;
 
-/* Libc functions */ 
+/* Libc functions */
 /* Basic */
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);

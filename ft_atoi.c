@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/25 15:28:52 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/08/26 13:55:17 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/08/27 19:59:05 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	ft_atoi(const char *str)
 	i = 0;
 	result = 0;
 	sign = 1;
-	while (str[i] > 8 && str[i] < 14)
+	while ((str[i] > 8 && str[i] < 14) || str[i] == ' ')
 			i++;
 	if (str[i] == '-')
 	{

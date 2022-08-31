@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/25 15:25:15 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/09/01 02:22:39 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/09/01 03:38:35 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include <stdlib.h>
 # include <unistd.h>
-# include <stdio.h>
+# include <limits.h>
 
 typedef struct s_list
 {

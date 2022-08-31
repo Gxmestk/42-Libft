@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/29 16:37:53 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/08/29 16:37:58 by tkhemniw         ###   ########.fr       */
+/*   Created: 2022/09/01 03:34:57 by tkhemniw          #+#    #+#             */
+/*   Updated: 2022/09/01 03:40:10 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	*ft_calloc(size_t count, size_t size)
 {
 	void	*dst;
 
+	if (!(count + 1 && size + 1))
+		return (NULL);
 	dst = (void *)malloc(count * size);
 	if (!dst)
 		return (NULL);

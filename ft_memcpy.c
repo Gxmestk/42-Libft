@@ -17,11 +17,15 @@ void	*ft_memcpy(void *dest, const void *src, size_t len)
 	char		*p_dest;
 	const char	*p_src;
 
-	if (!dest)	
-		return (NULL);
 	p_dest = (char *)dest;
 	p_src = (char *)src;
-	while (len-- > 0 )
+	while (len-- > 0)
 		*(p_dest++) = *(p_src++);
 	return (dest);
 }
+/*
+int main()
+{
+
+	printf("%p\n",ft_memcpy("            ", NULL, 17));
+}*/

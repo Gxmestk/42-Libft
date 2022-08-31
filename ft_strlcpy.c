@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/27 15:12:09 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/08/29 19:54:38 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/09/01 04:22:19 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 
 	len = 0;
 	i = 0;
-	if (!src)
-		return (0);
 	while (src[len] != '\0')
 	{
 		if (len + 1 < size)

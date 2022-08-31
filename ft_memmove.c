@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/27 14:03:39 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/09/01 03:58:12 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/09/01 04:21:10 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 			p_dst[len] = p_src[len];
 	}
 	else
-		while (len-- > 0)
+		while (len-- > 0 && (p_dst || p_src))
 			*(p_dst++) = *(p_src++);
 	return (dst);
 }

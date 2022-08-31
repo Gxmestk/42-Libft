@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/25 15:25:15 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/09/01 02:00:52 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/09/01 02:22:39 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ char	*ft_strchr(const char *str, int c);
 char	*ft_strrchr(const char *str, int c);
 int		ft_strncmp(const char *str1, const char *str2, size_t len);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);//
-int		ft_atoii(const char *str);
+int		ft_atoi(const char *str);
 
 /* Use of  malloc() */
 void	*ft_calloc(size_t count, size_t size);

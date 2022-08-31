@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/25 15:28:52 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/09/01 01:54:20 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/09/01 02:21:28 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,11 @@ int	ft_atoi(const char *str)
 	else if (str[i] == '+')
 			i++;
 	while (str[i] >= '0' && str[i] <= '9')
-			result = (result * 10) + (str[i++] - '0');
+			result = (result * 10) + (str[i++] - 48);
 	return (result * sign);
 }
+/*
+int main()
+{
+	printf("%d\n",ft_atoi("-55555"));
+}*/

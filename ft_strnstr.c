@@ -5,37 +5,32 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/27 16:54:58 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/09/01 01:21:26 by tkhemniw         ###   ########.fr       */
+/*   Created: 2022/09/01 02:54:12 by tkhemniw          #+#    #+#             */
+/*   Updated: 2022/09/01 02:55:12 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include "libft.h"
 
-char	*ft_strnstr(const char *str, const char *to_find, size_t len)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	const char	*haystack;
-	const char	*needle;
+	size_t	i;
+	size_t	j;
 
-	if (!to_find)
-		return ((char *)str);
-	haystack = str;
-	needle = to_find;
-	while (1)
+	i = 0;
+	j = 0;
+	if (!needle[0])
+		return ((char *)haystack);
+	while (i < len && haystack[i] != '\0')
 	{
-		if (*needle == '\0')
-			return ((char *)(haystack - (needle - to_find)));
-		if (*haystack == *needle)
-			needle++;
-		else
-			needle = to_find;
-		if (len == 0 || *haystack == '\0')
-			break ;
-		if (*haystack != *needle)
+		if (haystack[i] == needle[0])
 		{
-			haystack++;
-			len--;
+			while (haystack[i + j] == needle[j] && needle[j] && i + j < len)
+				j++;
+			if (!needle[j])
+				return ((char *)&haystack[i]);
 		}
+		i++;
 	}
 	return (NULL);
 }

@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/27 16:54:58 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/08/27 18:33:06 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/09/01 01:18:08 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,16 @@ char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 			needle = to_find;
 		if (len == 0 || *haystack == '\0')
 			break ;
-		haystack++;
+		if (*haystack != *needle)
+			haystack++;
 		len--;
 	}
 	return (NULL);
+}
+//gamgs
+//gamgf
+int main()
+{
+	char * a = ft_strnstr("LLorem ipsum", "Lorem", 42);
+	printf("%p\n",a);
 }

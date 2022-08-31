@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/27 16:54:58 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/09/01 01:18:45 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/09/01 01:21:26 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,10 @@ char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 		if (len == 0 || *haystack == '\0')
 			break ;
 		if (*haystack != *needle)
+		{
 			haystack++;
-		len--;
+			len--;
+		}
 	}
 	return (NULL);
 }

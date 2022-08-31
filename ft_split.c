@@ -1,69 +1,78 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/08/31 20:21:30 by tkhemniw          #+#    #+#             */
+/*   Updated: 2022/08/31 20:22:00 by tkhemniw         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-typedef struct s_split_list
+static	size_t	wordcount(char const *s, char c)
+{
+	size_t	count;
+
+	count = 0;
+	while (*s)
+	{
+		while (*s == c && *s)
+			s++;
+		if (*s != c && *s)
+			count++;
+		while (*s != c && *s)
+			s++;
+	}
+	return (count);
+}
+
+static	size_t	wordlen(char const *s, char c)
 {
 	size_t	len;
-	char	*bw;
-	struct s_list	*next;
-}	t_split_list;
 
-t_split_list	*ft_create_elem(size_t len, char *bw)
-{
-	t_split_list *list;
-
-	list = (t_split_list *)malloc(sizeof(t_split_list));
-	list->next = NULL;
-	list->len = len;
-	list->bw = bw;
-	return (list);
+	len = 0;
+	while (s[len] && s[len] != c)
+		len++;
+	return (len);
 }
-char **ft_split(char const *s, char c)
+
+static	char	*wordcpy(char const *s, char c)
 {
-	size_t	wc;
-	char **ss;
+	char	*str;
+
+	str = malloc(wordlen(s, c) + 1);
+	if (!str)
+		return (NULL);
+	ft_strlcpy(str, s, wordlen(s, c) + 1);
+	return (str);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	char	**res;
 	size_t	i;
-	t_split_list *spl;
-	size_t	lc;
-	char	*bw;
 
-	if (!s)
-		return NULL;
-	//case if !c
-	wc = 0;
-	lc = 0;
 	i = 0;
-	bw = s[0];
-	while (s[i])
+	if (!s)
+		return (NULL);
+	res = malloc((wordcount(s, c) + 1) * sizeof(char *));
+	if (!res)
+		return (NULL);
+	while (*s)
 	{
-		lc++;
-		if (s[i] == c)
+		while (*s && *s == c)
+			s++;
+		if (*s != c && *s)
 		{
-			lc = 0;
-			s[i] = '\0';
+			res[i] = wordcpy(s, c);
+			i++;
 		}
-		if (i > 0 && s[i - 1] != '\0' && s[i] == '\0')
-		{
-			wc++;
-			spl = ft_create_elem(lc, bw)
-			bw = s[i];
-		}
-		i++;
+		while (*s && *s != c)
+			s++;
 	}
-	ss = (char **)malloc(sizeof(char *) * (wc + 1));
-	while ()
-	
-
-	return NULL;
-}
-
-int	main()
-{
-	char str[] = "Games is Super Man";
-	char **s = ft_split(str,' ');
-	s++;
-	/*while (*s != NULL)
-	{
-		printf("%s\n",**s);
-		*s++;
-	}*/
+	res[i] = NULL;
+	return (res);
 }

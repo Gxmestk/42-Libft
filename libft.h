@@ -6,14 +6,13 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/25 15:25:15 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/08/30 09:42:40 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/08/31 20:59:21 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stddef.h>
 # include <stdlib.h>
 # include <unistd.h>
 # include <stdio.h>

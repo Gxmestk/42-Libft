@@ -6,7 +6,7 @@
 #    By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/27 14:19:44 by tkhemniw          #+#    #+#              #
-#    Updated: 2022/08/27 18:05:42 by tkhemniw         ###   ########.fr        #
+#    Updated: 2022/08/31 21:18:06 by tkhemniw         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,6 +20,7 @@ all: $(NAME)
 
 .c.o:
 	gcc -Wall -Wextra -Werror -c $< -o $(<:.c=.o)
+#$(SRCS)< -o $(<:.c=.o)
 $(NAME): $(OBJS)
 	ar -rcs $(NAME) $(OBJS)
 clean:

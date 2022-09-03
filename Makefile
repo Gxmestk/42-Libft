@@ -6,7 +6,7 @@
 #    By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/27 14:19:44 by tkhemniw          #+#    #+#              #
-#    Updated: 2022/09/01 02:14:44 by tkhemniw         ###   ########.fr        #
+#    Updated: 2022/09/03 09:35:56 by tkhemniw         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,7 +34,18 @@ bonus: $(NAME) $(BONUS_OBJS)
 		ar rcs $(NAME) $(BONUS_OBJS)
 
 .c.o:
-	gcc -Wall -Wextra -Werror -c $< -o $(<:.c=.o)
+#gcc -Wall -Wextra -Werror -c *.c
+#gcc -Wall -Wextra -Werror -c  $< $(=.c)
+#gcc -Wall -Wextra -Werror -c  $< $(.c)
+#gcc -Wall -Wextra -Werror -c $< -o $@
+#gcc -Wall -Wextra -Werror -c $^ -o $@
+#gcc -Wall -Wextra -Werror -c $+ -o $@
+#gcc -Wall -Wextra -Werror -c $? -o $@
+#gcc -Wall -Wextra -Werror -c $+ -o $@
+#gcc -Wall -Wextra -Werror -c $^
+	gcc -Wall -Wextra -Werror -c $?
+#gcc -Wall -Wextra -Werror -c  $< $(<:.c)
+#gcc -Wall -Wextra -Werror -c $< -o $(<:.c=.o)
 #above =  $(SRCS) no bonus
 $(NAME): $(OBJS)
 	ar -rcs $(NAME) $(OBJS)

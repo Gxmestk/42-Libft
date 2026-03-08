@@ -1,5 +1,5 @@
 *.o
 *.a
 *.out
-*.vscode
-*.md
+.vscode/
+obj/
